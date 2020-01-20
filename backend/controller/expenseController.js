@@ -12,6 +12,7 @@ exports.getexpense = (req, res, next) => {
 
 exports.addExpense = (req, res, next) => {
     let newExpense = new expense({
+        categoryId:req.body.categoryId,        
         Id: req.body.Id,
         Name: req.body.Name,
         amount: req.body.amount,
